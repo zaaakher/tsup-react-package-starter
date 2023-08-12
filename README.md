@@ -11,15 +11,15 @@ npx degit TimMikeladze/tsup-react-package-starter my-react-package
 
 cd my-react-package && git init
 
-yarn && yarn dev
+pnpm i && pnpm dev
 ```
 
-❗Important note: This project uses [yarn](https://yarnpkg.com/) for managing dependencies. If you want to use another package manager, remove the `yarn.lock` and control-f for usages of `yarn` in the project and replace them with your package manager of choice.
+❗Important note: This project uses [pnpm](https://pnpm.io/) for managing dependencies. If you want to use another package manager, remove the `pnpm.lock` and control-f for usages of `pnpm` in the project and replace them with your package manager of choice.
 
 ## What's included?
 
 - ⚡️[tsup](https://github.com/egoist/tsup) - The simplest and fastest way to bundle your TypeScript libraries. Used to bundle package as ESM and CJS modules. Supports TypeScript, Code Splitting, PostCSS, and more out of the box.
-- 🔗 [Yalc](https://github.com/wclr/yalc) - Better workflow then npm or yarn link for package authors.
+- 🔗 [Yalc](https://github.com/wclr/yalc) - Better workflow for local package development and linking.
 - 📖 [Storybook](https://storybook.js.org/) - Build UI components and pages in isolation. It streamlines UI development, testing, and documentation.
 - ⚡️ [Vitest](https://vitest.dev/) - A testing framework for JavaScript. Preconfigured to work with TypeScript and JSX.
 - 🔼 [Release-it](https://github.com/release-it/release-it/) - release-it is a command line tool to automatically generate a new GitHub Release and populates it with the changes (commits) made since the last release.
@@ -39,13 +39,13 @@ yarn && yarn dev
 Watch and rebuild code with `tsup` and runs Storybook to preview your UI during development.
 
 ```console
-yarn dev
+pnpm dev
 ```
 
 Run all tests and watch for changes
 
 ```console
-yarn test
+pnpm test
 ```
 
 ### 🏗️ Building
@@ -53,7 +53,7 @@ yarn test
 Build package with `tsup` for production.
 
 ```console
-yarn build
+pnpm build
 ```
 
 ### 🖇️ Linking
@@ -75,7 +75,7 @@ Learn more about `yalc` [here](https://github.com/wclr/yalc).
 When you are ready to commit simply run the following command to get a well formatted commit message. All staged files will automatically be linted and fixed as well.
 
 ```console
-yarn commit
+pnpm commit
 ```
 
 ### 🔖 Releasing, tagging & publishing to NPM
@@ -85,13 +85,13 @@ Create a semantic version tag and publish to Github Releases. When a new release
 Learn more about how to use the `release-it` command [here](https://github.com/release-it/release-it).
 
 ```console
-yarn release
+pnpm release
 ```
 
 When you are ready to publish to NPM simply run the following command:
 
 ```console
-yarn publish
+pnpm publish
 ```
 
 #### 🤖 Auto publish after Github Release
@@ -102,7 +102,7 @@ yarn publish
 
 Import CSS files works out of the box. Simply import your CSS files in your components and they will be bundled with your package.
 
-[tsup](https://github.com/egoist/tsup) supports PostCSS out of the box. Simply run `yarn add postcss -D` add a `postcss.config.js` file to the root of your project, then add any plugins you need. Learn more how to configure PostCSS [here](https://tsup.egoist.dev/#css-support).
+[tsup](https://github.com/egoist/tsup) supports PostCSS out of the box. Simply run `pnpm add postcss -D` add a `postcss.config.js` file to the root of your project, then add any plugins you need. Learn more how to configure PostCSS [here](https://tsup.egoist.dev/#css-support).
 
 Additionally consider using the [tsup](https://github.com/egoist/tsup) configuration option `injectStyle` to inject the CSS directly into your Javascript bundle instead of outputting a separate CSS file.
 
